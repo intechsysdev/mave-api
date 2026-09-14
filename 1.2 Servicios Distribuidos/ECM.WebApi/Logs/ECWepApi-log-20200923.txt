@@ -1,0 +1,317 @@
+2020-09-23 08:39:02.753 -05:00 [INF] Iniciando Seg.WepApi
+2020-09-23 08:39:11.495 -05:00 [INF] User profile is available. Using 'C:\Users\admint\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-09-23 08:39:12.622 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/values  
+2020-09-23 08:39:12.865 -05:00 [INF] Invoke: "{\"path\":\"/api/values\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:62117\",\"body\":\"\"}"
+2020-09-23 08:39:12.920 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:39:12.994 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2020-09-23 08:39:13.004 -05:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller ECM.WebApi.Controllers.ValuesController (ECM.WebApi).
+2020-09-23 08:39:13.013 -05:00 [INF] Executing action method ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) - Validation state: "Valid"
+2020-09-23 08:39:13.018 -05:00 [INF] Executed action method ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.2995ms.
+2020-09-23 08:39:13.026 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2020-09-23 08:39:13.053 -05:00 [INF] Executed action ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) in 46.8592ms
+2020-09-23 08:39:13.054 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2020-09-23 08:39:13.057 -05:00 [INF] Request finished in 436.8861ms 200 application/json; charset=utf-8
+2020-09-23 08:39:13.090 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/favicon.ico  
+2020-09-23 08:39:13.091 -05:00 [INF] Invoke: "{\"path\":\"/favicon.ico\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:62117\",\"body\":\"\"}"
+2020-09-23 08:39:13.091 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:39:13.094 -05:00 [INF] Request finished in 3.9664ms 404 
+2020-09-23 08:42:49.982 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/Session/Reset  
+2020-09-23 08:42:49.988 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:42:49.989 -05:00 [INF] Request finished in 7.8497ms 204 
+2020-09-23 08:42:49.991 -05:00 [INF] Request starting HTTP/2.0 POST https://localhost:44350/api/Session/Reset application/json 85
+2020-09-23 08:42:49.991 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:42:49.997 -05:00 [INF] Invoke: "{\"path\":\"/api/Session/Reset\",\"userid\":null,\"method\":\"POST\",\"remoteIp\":\"::1:62193\",\"body\":\"{\\\"usercust\\\":\\\"16278365\\\",\\\"usersuccli\\\":\\\"16278365\\\",\\\"email\\\":\\\"fabianerodriguezl@gmail.com\\\"}\"}"
+2020-09-23 08:42:49.997 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:42:50.003 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Reset (ECM.WebApi)'
+2020-09-23 08:42:50.019 -05:00 [INF] Route matched with {action = "Reset", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Reset(ECM.Aplicacion.DTO.Authentication.ResetPasswordDTO) on controller ECM.WebApi.Controllers.Authentication.SessionController (ECM.WebApi).
+2020-09-23 08:42:50.691 -05:00 [INF] Entity Framework Core 2.2.6-servicing-10079 initialized 'UnitOfWorkSEG' using provider 'IBM.EntityFrameworkCore' with options: None
+2020-09-23 08:42:50.751 -05:00 [INF] Executing action method ECM.WebApi.Controllers.Authentication.SessionController.Reset (ECM.WebApi) - Validation state: "Valid"
+2020-09-23 08:42:54.804 -05:00 [INF] Executed DbCommand (229ms) [Parameters=[@__resetPassword_UserCust_0='?' (Size = 8), @__resetPassword_UserSuccli_1='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.musua_empr_id, q.musua_cust, q.musua_succli, q.musua_approve, q.musua_expiration_token, q.musua_mail, q.musua_name, q.musua_passencrip, q.musua_password, q.musua_phone, q.musua_token
+FROM ecm_musuario AS q
+WHERE (q.musua_cust = @__resetPassword_UserCust_0) AND (q.musua_succli = @__resetPassword_UserSuccli_1)
+2020-09-23 08:42:54.920 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.mempr_id, q.mempr_addr, q.mempr_apiapp2fa, q.mempr_apimen2fa, q.mempr_apisms, q.mempr_cmpy, q.mempr_come, q.mempr_conn, q.mempr_data, q.mempr_fcurr, q.mempr_fdate, q.mempr_fnumb, q.mempr_iden, q.mempr_name, q.mempr_numhisord, q.mempr_phon, q.mempr_term, q.mempr_web, q.mempre_mone_id, q.mempre_pais_id
+FROM ecm_mempresa AS q
+WHERE q.mempr_cmpy = @__usuario_MusuaEmprId_0
+2020-09-23 08:42:54.969 -05:00 [INF] Token 91f83bcdde9eb0cfb9d05e445ff93ea3
+2020-09-23 08:42:55.068 -05:00 [INF] Start processing HTTP request POST "https://m5gej.api.infobip.com/sms/2/text/single"
+2020-09-23 08:42:55.070 -05:00 [INF] Sending HTTP request POST "https://m5gej.api.infobip.com/sms/2/text/single"
+2020-09-23 08:42:56.103 -05:00 [INF] Received HTTP response after 1027.6608ms - "OK"
+2020-09-23 08:42:56.104 -05:00 [INF] End processing HTTP request after 1037.1775ms - "OK"
+2020-09-23 08:42:56.113 -05:00 [INF] SendSms '"OK"'. From Recamier, to 573114613565, Result {"messages":[{"to":"573114613565","status":{"groupId":1,"groupName":"PENDING","id":26,"name":"PENDING_ACCEPTED","description":"Message sent to next instance"},"messageId":"30086857598403598257"}]}
+2020-09-23 08:42:56.118 -05:00 [INF] Start processing HTTP request POST "https://m5gej.api.infobip.com/email/2/send"
+2020-09-23 08:42:56.118 -05:00 [INF] Sending HTTP request POST "https://m5gej.api.infobip.com/email/2/send"
+2020-09-23 08:42:57.065 -05:00 [INF] Received HTTP response after 947.55400000000009ms - "OK"
+2020-09-23 08:42:57.066 -05:00 [INF] End processing HTTP request after 947.8266000000001ms - "OK"
+2020-09-23 08:42:57.066 -05:00 [INF] SendMail '"OK"'. From Recamier S.A. <e-commmerce@mensajeria.recamier.com>, to fabianerodriguezl@gmail.com, Result {"messages":[{"to":"fabianerodriguezl@gmail.com","messageCount":1,"messageId":"669lpb63ocbrvx25u3vs","status":{"groupId":1,"groupName":"PENDING","id":7,"name":"PENDING_ENROUTE","description":"Message sent to next instance"}}]}
+2020-09-23 08:42:57.156 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 2), @p2='?' (Size = 12), @p4='?' (Size = 12), @p6='?' (Size = 16) (DbType = DateTime), @p8='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE ecm_musuario SET musua_expiration_token = @p6, musua_token = @p8
+ WHERE ( musua_empr_id = @p0 AND musua_cust = @p2 AND musua_succli = @p4 );
+2020-09-23 08:42:57.172 -05:00 [INF] Executed action method ECM.WebApi.Controllers.Authentication.SessionController.Reset (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.OkResult in 6420.3552ms.
+2020-09-23 08:42:57.177 -05:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2020-09-23 08:42:57.179 -05:00 [INF] Executed action ECM.WebApi.Controllers.Authentication.SessionController.Reset (ECM.WebApi) in 7159.7463000000007ms
+2020-09-23 08:42:57.180 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Reset (ECM.WebApi)'
+2020-09-23 08:42:57.187 -05:00 [INF] Request finished in 7195.6944ms 200 
+2020-09-23 08:44:56.096 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/Session/AssingPassword  
+2020-09-23 08:44:56.096 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:44:56.097 -05:00 [INF] Request finished in 0.4443ms 204 
+2020-09-23 08:44:56.100 -05:00 [INF] Request starting HTTP/2.0 PUT https://localhost:44350/api/Session/AssingPassword application/json 179
+2020-09-23 08:44:56.100 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:44:56.100 -05:00 [INF] Invoke: "{\"path\":\"/api/Session/AssingPassword\",\"userid\":null,\"method\":\"PUT\",\"remoteIp\":\"::1:62193\",\"body\":\"{\\\"usercust\\\":\\\"16278365\\\",\\\"usersuccli\\\":\\\"16278365\\\",\\\"email\\\":\\\"fabianerodriguezl@gmail.com\\\",\\\"token\\\":\\\"91f83bcdde9eb0cfb9d05e445ff93ea3\\\",\\\"password\\\":\\\"In20ma20\\\",\\\"confirmpassword\\\":\\\"In20ma20\\\"}\"}"
+2020-09-23 08:44:56.100 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:44:56.103 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.AssingPassword (ECM.WebApi)'
+2020-09-23 08:44:56.106 -05:00 [INF] Route matched with {action = "AssingPassword", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssingPassword(ECM.Aplicacion.DTO.Authentication.AssingPasswordDTO) on controller ECM.WebApi.Controllers.Authentication.SessionController (ECM.WebApi).
+2020-09-23 08:44:56.112 -05:00 [INF] Entity Framework Core 2.2.6-servicing-10079 initialized 'UnitOfWorkSEG' using provider 'IBM.EntityFrameworkCore' with options: None
+2020-09-23 08:44:56.126 -05:00 [INF] Executing action method ECM.WebApi.Controllers.Authentication.SessionController.AssingPassword (ECM.WebApi) - Validation state: "Valid"
+2020-09-23 08:44:56.163 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__assingPassword_UserCust_0='?' (Size = 8), @__assingPassword_UserSuccli_1='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.musua_empr_id, q.musua_cust, q.musua_succli, q.musua_approve, q.musua_expiration_token, q.musua_mail, q.musua_name, q.musua_passencrip, q.musua_password, q.musua_phone, q.musua_token
+FROM ecm_musuario AS q
+WHERE (q.musua_cust = @__assingPassword_UserCust_0) AND (q.musua_succli = @__assingPassword_UserSuccli_1)
+2020-09-23 08:44:56.177 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 2), @p2='?' (Size = 12), @p4='?' (Size = 12), @p6='?' (DbType = DateTime), @p8='?' (Size = 32), @p10='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+UPDATE ecm_musuario SET musua_expiration_token = @p6, musua_passencrip = @p8, musua_token = @p10
+ WHERE ( musua_empr_id = @p0 AND musua_cust = @p2 AND musua_succli = @p4 );
+2020-09-23 08:44:56.178 -05:00 [INF] Executed action method ECM.WebApi.Controllers.Authentication.SessionController.AssingPassword (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.OkResult in 52.4527ms.
+2020-09-23 08:44:56.179 -05:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2020-09-23 08:44:56.179 -05:00 [INF] Executed action ECM.WebApi.Controllers.Authentication.SessionController.AssingPassword (ECM.WebApi) in 72.1981ms
+2020-09-23 08:44:56.179 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.AssingPassword (ECM.WebApi)'
+2020-09-23 08:44:56.179 -05:00 [INF] Request finished in 79.4768ms 200 
+2020-09-23 08:45:18.888 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/Session/Login  
+2020-09-23 08:45:18.888 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:45:18.888 -05:00 [INF] Request finished in 0.5592ms 204 
+2020-09-23 08:45:18.900 -05:00 [INF] Request starting HTTP/2.0 POST https://localhost:44350/api/Session/Login application/json 69
+2020-09-23 08:45:18.900 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:45:18.900 -05:00 [INF] Invoke: "{\"path\":\"/api/Session/Login\",\"userid\":null,\"method\":\"POST\",\"remoteIp\":\"::1:62193\",\"body\":\"{\\\"userCust\\\":\\\"16278365\\\",\\\"userSuccli\\\":\\\"16278365\\\",\\\"password\\\":\\\"In20ma20\\\"}\"}"
+2020-09-23 08:45:18.900 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:45:18.901 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi)'
+2020-09-23 08:45:18.906 -05:00 [INF] Route matched with {action = "Login", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ECM.Aplicacion.DTO.Authentication.LoginDTO) on controller ECM.WebApi.Controllers.Authentication.SessionController (ECM.WebApi).
+2020-09-23 08:45:18.906 -05:00 [INF] Entity Framework Core 2.2.6-servicing-10079 initialized 'UnitOfWorkSEG' using provider 'IBM.EntityFrameworkCore' with options: None
+2020-09-23 08:45:18.910 -05:00 [INF] Executing action method ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi) - Validation state: "Valid"
+2020-09-23 08:45:18.923 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__login_UserCust_0='?' (Size = 8), @__login_UserSuccli_1='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.musua_empr_id, q.musua_cust, q.musua_succli, q.musua_approve, q.musua_expiration_token, q.musua_mail, q.musua_name, q.musua_passencrip, q.musua_password, q.musua_phone, q.musua_token
+FROM ecm_musuario AS q
+WHERE (q.musua_cust = @__login_UserCust_0) AND (q.musua_succli = @__login_UserSuccli_1)
+2020-09-23 08:45:18.933 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.mempr_id, q.mempr_addr, q.mempr_apiapp2fa, q.mempr_apimen2fa, q.mempr_apisms, q.mempr_cmpy, q.mempr_come, q.mempr_conn, q.mempr_data, q.mempr_fcurr, q.mempr_fdate, q.mempr_fnumb, q.mempr_iden, q.mempr_name, q.mempr_numhisord, q.mempr_phon, q.mempr_term, q.mempr_web, q.mempre_mone_id, q.mempre_pais_id
+FROM ecm_mempresa AS q
+WHERE q.mempr_cmpy = @__usuario_MusuaEmprId_0
+2020-09-23 08:45:18.951 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2), @__usuario_MusuaCust_1='?' (Size = 12), @__usuario_MusuaSuccli_2='?' (Size = 12), @___contextAccessor_ClientIP_3='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.rmac_empr_id, q.rmac_usua_cust, q.rmac_usua_succli, q.rmac_mac, q.rmac_date, q.rmac_vapp_2fa
+FROM ecm_rmac AS q
+WHERE (((q.rmac_empr_id = @__usuario_MusuaEmprId_0) AND (q.rmac_usua_cust = @__usuario_MusuaCust_1)) AND (q.rmac_usua_succli = @__usuario_MusuaSuccli_2)) AND (q.rmac_mac = @___contextAccessor_ClientIP_3)
+2020-09-23 08:45:18.965 -05:00 [INF] Start processing HTTP request POST "https://m5gej.api.infobip.com/sms/2/text/single"
+2020-09-23 08:45:18.965 -05:00 [INF] Sending HTTP request POST "https://m5gej.api.infobip.com/sms/2/text/single"
+2020-09-23 08:45:19.690 -05:00 [INF] Received HTTP response after 724.66280000000006ms - "OK"
+2020-09-23 08:45:19.690 -05:00 [INF] End processing HTTP request after 724.9525ms - "OK"
+2020-09-23 08:45:19.691 -05:00 [INF] SendSms '"OK"'. From Recamier, to 573114613565, Result {"messages":[{"to":"573114613565","status":{"groupId":1,"groupName":"PENDING","id":26,"name":"PENDING_ACCEPTED","description":"Message sent to next instance"},"messageId":"30086871960203571062"}]}
+2020-09-23 08:45:19.698 -05:00 [INF] Start processing HTTP request POST "https://m5gej.api.infobip.com/email/2/send"
+2020-09-23 08:45:19.699 -05:00 [INF] Sending HTTP request POST "https://m5gej.api.infobip.com/email/2/send"
+2020-09-23 08:45:20.544 -05:00 [INF] Received HTTP response after 844.9256ms - "OK"
+2020-09-23 08:45:20.544 -05:00 [INF] End processing HTTP request after 845.2929ms - "OK"
+2020-09-23 08:45:20.544 -05:00 [INF] SendMail '"OK"'. From Recamier S.A. <e-commmerce@mensajeria.recamier.com>, to fabianerodriguezl@gmail.com, Result {"messages":[{"to":"fabianerodriguezl@gmail.com","messageCount":1,"messageId":"dybr5bvbvelf42i4h755","status":{"groupId":1,"groupName":"PENDING","id":7,"name":"PENDING_ENROUTE","description":"Message sent to next instance"}}]}
+2020-09-23 08:45:20.544 -05:00 [INF] Codigo verificación 134949
+2020-09-23 08:45:20.573 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2), @__usuario_MusuaCust_1='?' (Size = 12), @__usuario_MusuaSuccli_2='?' (Size = 12), @___contextAccessor_ClientIP_3='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.rterm_empr_id, q.rterm_usua_cust, q.rterm_usua_succli, q.rterm_mac, q.rterm_approve, q.rterm_date
+FROM ecm_rterminosuso AS q
+WHERE (((q.rterm_empr_id = @__usuario_MusuaEmprId_0) AND (q.rterm_usua_cust = @__usuario_MusuaCust_1)) AND (q.rterm_usua_succli = @__usuario_MusuaSuccli_2)) AND (q.rterm_mac = @___contextAccessor_ClientIP_3)
+2020-09-23 08:45:20.588 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.mempr_id, q.mempr_addr, q.mempr_apiapp2fa, q.mempr_apimen2fa, q.mempr_apisms, q.mempr_cmpy, q.mempr_come, q.mempr_conn, q.mempr_data, q.mempr_fcurr, q.mempr_fdate, q.mempr_fnumb, q.mempr_iden, q.mempr_name, q.mempr_numhisord, q.mempr_phon, q.mempr_term, q.mempr_web, q.mempre_mone_id, q.mempre_pais_id
+FROM ecm_mempresa AS q
+WHERE q.mempr_cmpy = @__usuario_MusuaEmprId_0
+2020-09-23 08:45:20.597 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 2), @p2='?' (Size = 12), @p4='?' (Size = 12), @p6='?' (Size = 3), @p8='?' (Size = 16) (DbType = DateTime), @p10='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE ecm_rmac SET rmac_date = @p8, rmac_vapp_2fa = @p10
+ WHERE ( rmac_empr_id = @p0 AND rmac_usua_cust = @p2 AND rmac_usua_succli = @p4 AND rmac_mac = @p6 );
+2020-09-23 08:45:20.601 -05:00 [INF] Executed action method ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1691.5571ms.
+2020-09-23 08:45:20.602 -05:00 [INF] Executing ObjectResult, writing value of type 'ECM.Aplicacion.DTO.Authentication.LoginResultDTO'.
+2020-09-23 08:45:20.618 -05:00 [INF] Executed action ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi) in 1711.9415000000001ms
+2020-09-23 08:45:20.618 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi)'
+2020-09-23 08:45:20.618 -05:00 [INF] Request finished in 1718.5055ms 200 application/json; charset=utf-8
+2020-09-23 08:45:37.390 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/Session/Login/134949  
+2020-09-23 08:45:37.391 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:45:37.391 -05:00 [INF] Request finished in 0.7093ms 204 
+2020-09-23 08:45:37.394 -05:00 [INF] Request starting HTTP/2.0 POST https://localhost:44350/api/Session/Login/134949 application/json 69
+2020-09-23 08:45:37.394 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:45:37.394 -05:00 [INF] Invoke: "{\"path\":\"/api/Session/Login/134949\",\"userid\":null,\"method\":\"POST\",\"remoteIp\":\"::1:62193\",\"body\":\"{\\\"userCust\\\":\\\"16278365\\\",\\\"userSuccli\\\":\\\"16278365\\\",\\\"password\\\":\\\"In20ma20\\\"}\"}"
+2020-09-23 08:45:37.394 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:45:37.394 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi)'
+2020-09-23 08:45:37.399 -05:00 [INF] Route matched with {action = "Login", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ECM.Aplicacion.DTO.Authentication.LoginDTO, System.String) on controller ECM.WebApi.Controllers.Authentication.SessionController (ECM.WebApi).
+2020-09-23 08:45:37.400 -05:00 [INF] Entity Framework Core 2.2.6-servicing-10079 initialized 'UnitOfWorkSEG' using provider 'IBM.EntityFrameworkCore' with options: None
+2020-09-23 08:45:37.401 -05:00 [INF] Executing action method ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi) - Validation state: "Valid"
+2020-09-23 08:45:37.405 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__login_UserCust_0='?' (Size = 8), @__login_UserSuccli_1='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.musua_empr_id, q.musua_cust, q.musua_succli, q.musua_approve, q.musua_expiration_token, q.musua_mail, q.musua_name, q.musua_passencrip, q.musua_password, q.musua_phone, q.musua_token
+FROM ecm_musuario AS q
+WHERE (q.musua_cust = @__login_UserCust_0) AND (q.musua_succli = @__login_UserSuccli_1)
+2020-09-23 08:45:37.409 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2), @__usuario_MusuaCust_1='?' (Size = 12), @__usuario_MusuaSuccli_2='?' (Size = 12), @___contextAccessor_ClientIP_3='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.rmac_empr_id, q.rmac_usua_cust, q.rmac_usua_succli, q.rmac_mac, q.rmac_date, q.rmac_vapp_2fa
+FROM ecm_rmac AS q
+WHERE (((q.rmac_empr_id = @__usuario_MusuaEmprId_0) AND (q.rmac_usua_cust = @__usuario_MusuaCust_1)) AND (q.rmac_usua_succli = @__usuario_MusuaSuccli_2)) AND (q.rmac_mac = @___contextAccessor_ClientIP_3)
+2020-09-23 08:45:37.413 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2), @__usuario_MusuaCust_1='?' (Size = 12), @__usuario_MusuaSuccli_2='?' (Size = 12), @___contextAccessor_ClientIP_3='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.rterm_empr_id, q.rterm_usua_cust, q.rterm_usua_succli, q.rterm_mac, q.rterm_approve, q.rterm_date
+FROM ecm_rterminosuso AS q
+WHERE (((q.rterm_empr_id = @__usuario_MusuaEmprId_0) AND (q.rterm_usua_cust = @__usuario_MusuaCust_1)) AND (q.rterm_usua_succli = @__usuario_MusuaSuccli_2)) AND (q.rterm_mac = @___contextAccessor_ClientIP_3)
+2020-09-23 08:45:37.415 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.mempr_id, q.mempr_addr, q.mempr_apiapp2fa, q.mempr_apimen2fa, q.mempr_apisms, q.mempr_cmpy, q.mempr_come, q.mempr_conn, q.mempr_data, q.mempr_fcurr, q.mempr_fdate, q.mempr_fnumb, q.mempr_iden, q.mempr_name, q.mempr_numhisord, q.mempr_phon, q.mempr_term, q.mempr_web, q.mempre_mone_id, q.mempre_pais_id
+FROM ecm_mempresa AS q
+WHERE q.mempr_cmpy = @__usuario_MusuaEmprId_0
+2020-09-23 08:45:37.604 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 2), @p2='?' (Size = 12), @p4='?' (Size = 12), @p6='?' (Size = 3), @p8='?' (Size = 16) (DbType = DateTime), @p10='?' (Size = 4) (DbType = Int32), @p12='?' (Size = 4) (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO ecm_racceso (racce_empr_id, racce_usua_cust, racce_usua_succli, racce_mac, racce_date, racce_tapp_id, racce_vapp_id)
+VALUES (@p0, @p2, @p4, @p6, @p8, @p10, @p12);
+2020-09-23 08:45:37.606 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p14='?' (Size = 2), @p16='?' (Size = 12), @p18='?' (Size = 12), @p20='?' (Size = 3), @p22='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE ecm_rmac SET rmac_vapp_2fa = @p22
+ WHERE ( rmac_empr_id = @p14 AND rmac_usua_cust = @p16 AND rmac_usua_succli = @p18 AND rmac_mac = @p20 );
+2020-09-23 08:45:37.610 -05:00 [INF] Executed action method ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 208.97230000000002ms.
+2020-09-23 08:45:37.610 -05:00 [INF] Executing ObjectResult, writing value of type 'ECM.Aplicacion.DTO.Authentication.LoginResultDTO'.
+2020-09-23 08:45:37.615 -05:00 [INF] Executed action ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi) in 215.23870000000002ms
+2020-09-23 08:45:37.615 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi)'
+2020-09-23 08:45:37.615 -05:00 [INF] Request finished in 221.6846ms 200 application/json; charset=utf-8
+2020-09-23 08:51:45.462 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/Session/Login  
+2020-09-23 08:51:45.462 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:51:45.462 -05:00 [INF] Request finished in 0.4002ms 204 
+2020-09-23 08:51:45.464 -05:00 [INF] Request starting HTTP/2.0 POST https://localhost:44350/api/Session/Login application/json 69
+2020-09-23 08:51:45.464 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:51:45.465 -05:00 [INF] Invoke: "{\"path\":\"/api/Session/Login\",\"userid\":null,\"method\":\"POST\",\"remoteIp\":\"::1:62386\",\"body\":\"{\\\"userCust\\\":\\\"16278365\\\",\\\"userSuccli\\\":\\\"16278365\\\",\\\"password\\\":\\\"In20ma20\\\"}\"}"
+2020-09-23 08:51:45.465 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:51:45.465 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi)'
+2020-09-23 08:51:45.465 -05:00 [INF] Route matched with {action = "Login", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ECM.Aplicacion.DTO.Authentication.LoginDTO) on controller ECM.WebApi.Controllers.Authentication.SessionController (ECM.WebApi).
+2020-09-23 08:51:45.465 -05:00 [INF] Entity Framework Core 2.2.6-servicing-10079 initialized 'UnitOfWorkSEG' using provider 'IBM.EntityFrameworkCore' with options: None
+2020-09-23 08:51:45.466 -05:00 [INF] Executing action method ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi) - Validation state: "Valid"
+2020-09-23 08:51:45.491 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__login_UserCust_0='?' (Size = 8), @__login_UserSuccli_1='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.musua_empr_id, q.musua_cust, q.musua_succli, q.musua_approve, q.musua_expiration_token, q.musua_mail, q.musua_name, q.musua_passencrip, q.musua_password, q.musua_phone, q.musua_token
+FROM ecm_musuario AS q
+WHERE (q.musua_cust = @__login_UserCust_0) AND (q.musua_succli = @__login_UserSuccli_1)
+2020-09-23 08:51:45.495 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.mempr_id, q.mempr_addr, q.mempr_apiapp2fa, q.mempr_apimen2fa, q.mempr_apisms, q.mempr_cmpy, q.mempr_come, q.mempr_conn, q.mempr_data, q.mempr_fcurr, q.mempr_fdate, q.mempr_fnumb, q.mempr_iden, q.mempr_name, q.mempr_numhisord, q.mempr_phon, q.mempr_term, q.mempr_web, q.mempre_mone_id, q.mempre_pais_id
+FROM ecm_mempresa AS q
+WHERE q.mempr_cmpy = @__usuario_MusuaEmprId_0
+2020-09-23 08:51:45.500 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2), @__usuario_MusuaCust_1='?' (Size = 12), @__usuario_MusuaSuccli_2='?' (Size = 12), @___contextAccessor_ClientIP_3='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.rmac_empr_id, q.rmac_usua_cust, q.rmac_usua_succli, q.rmac_mac, q.rmac_date, q.rmac_vapp_2fa
+FROM ecm_rmac AS q
+WHERE (((q.rmac_empr_id = @__usuario_MusuaEmprId_0) AND (q.rmac_usua_cust = @__usuario_MusuaCust_1)) AND (q.rmac_usua_succli = @__usuario_MusuaSuccli_2)) AND (q.rmac_mac = @___contextAccessor_ClientIP_3)
+2020-09-23 08:51:45.501 -05:00 [INF] Start processing HTTP request POST "https://m5gej.api.infobip.com/sms/2/text/single"
+2020-09-23 08:51:45.501 -05:00 [INF] Sending HTTP request POST "https://m5gej.api.infobip.com/sms/2/text/single"
+2020-09-23 08:51:46.209 -05:00 [INF] Received HTTP response after 708.09930000000008ms - "OK"
+2020-09-23 08:51:46.209 -05:00 [INF] End processing HTTP request after 708.4373ms - "OK"
+2020-09-23 08:51:46.209 -05:00 [INF] SendSms '"OK"'. From Recamier, to 573114613565, Result {"messages":[{"to":"573114613565","status":{"groupId":1,"groupName":"PENDING","id":26,"name":"PENDING_ACCEPTED","description":"Message sent to next instance"},"messageId":"30086910612903573344"}]}
+2020-09-23 08:51:46.209 -05:00 [INF] Start processing HTTP request POST "https://m5gej.api.infobip.com/email/2/send"
+2020-09-23 08:51:46.210 -05:00 [INF] Sending HTTP request POST "https://m5gej.api.infobip.com/email/2/send"
+2020-09-23 08:51:47.047 -05:00 [INF] Received HTTP response after 837.5279ms - "OK"
+2020-09-23 08:51:47.047 -05:00 [INF] End processing HTTP request after 837.88370000000009ms - "OK"
+2020-09-23 08:51:47.048 -05:00 [INF] SendMail '"OK"'. From Recamier S.A. <e-commmerce@mensajeria.recamier.com>, to fabianerodriguezl@gmail.com, Result {"messages":[{"to":"fabianerodriguezl@gmail.com","messageCount":1,"messageId":"xogl8li6bj7fr9fphozn","status":{"groupId":1,"groupName":"PENDING","id":7,"name":"PENDING_ENROUTE","description":"Message sent to next instance"}}]}
+2020-09-23 08:51:47.048 -05:00 [INF] Codigo verificación 602364
+2020-09-23 08:51:47.052 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2), @__usuario_MusuaCust_1='?' (Size = 12), @__usuario_MusuaSuccli_2='?' (Size = 12), @___contextAccessor_ClientIP_3='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.rterm_empr_id, q.rterm_usua_cust, q.rterm_usua_succli, q.rterm_mac, q.rterm_approve, q.rterm_date
+FROM ecm_rterminosuso AS q
+WHERE (((q.rterm_empr_id = @__usuario_MusuaEmprId_0) AND (q.rterm_usua_cust = @__usuario_MusuaCust_1)) AND (q.rterm_usua_succli = @__usuario_MusuaSuccli_2)) AND (q.rterm_mac = @___contextAccessor_ClientIP_3)
+2020-09-23 08:51:47.055 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.mempr_id, q.mempr_addr, q.mempr_apiapp2fa, q.mempr_apimen2fa, q.mempr_apisms, q.mempr_cmpy, q.mempr_come, q.mempr_conn, q.mempr_data, q.mempr_fcurr, q.mempr_fdate, q.mempr_fnumb, q.mempr_iden, q.mempr_name, q.mempr_numhisord, q.mempr_phon, q.mempr_term, q.mempr_web, q.mempre_mone_id, q.mempre_pais_id
+FROM ecm_mempresa AS q
+WHERE q.mempr_cmpy = @__usuario_MusuaEmprId_0
+2020-09-23 08:51:47.061 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 2), @p2='?' (Size = 12), @p4='?' (Size = 12), @p6='?' (Size = 3), @p8='?' (Size = 16) (DbType = DateTime), @p10='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE ecm_rmac SET rmac_date = @p8, rmac_vapp_2fa = @p10
+ WHERE ( rmac_empr_id = @p0 AND rmac_usua_cust = @p2 AND rmac_usua_succli = @p4 AND rmac_mac = @p6 );
+2020-09-23 08:51:47.063 -05:00 [INF] Executed action method ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1597.0597ms.
+2020-09-23 08:51:47.063 -05:00 [INF] Executing ObjectResult, writing value of type 'ECM.Aplicacion.DTO.Authentication.LoginResultDTO'.
+2020-09-23 08:51:47.064 -05:00 [INF] Executed action ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi) in 1598.8483ms
+2020-09-23 08:51:47.064 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi)'
+2020-09-23 08:51:47.064 -05:00 [INF] Request finished in 1600.064ms 200 application/json; charset=utf-8
+2020-09-23 08:52:07.398 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/Session/Login/602364  
+2020-09-23 08:52:07.398 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.398 -05:00 [INF] Request finished in 0.3562ms 204 
+2020-09-23 08:52:07.401 -05:00 [INF] Request starting HTTP/2.0 POST https://localhost:44350/api/Session/Login/602364 application/json 69
+2020-09-23 08:52:07.401 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.401 -05:00 [INF] Invoke: "{\"path\":\"/api/Session/Login/602364\",\"userid\":null,\"method\":\"POST\",\"remoteIp\":\"::1:62386\",\"body\":\"{\\\"userCust\\\":\\\"16278365\\\",\\\"userSuccli\\\":\\\"16278365\\\",\\\"password\\\":\\\"In20ma20\\\"}\"}"
+2020-09-23 08:52:07.401 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:52:07.402 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi)'
+2020-09-23 08:52:07.402 -05:00 [INF] Route matched with {action = "Login", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ECM.Aplicacion.DTO.Authentication.LoginDTO, System.String) on controller ECM.WebApi.Controllers.Authentication.SessionController (ECM.WebApi).
+2020-09-23 08:52:07.402 -05:00 [INF] Entity Framework Core 2.2.6-servicing-10079 initialized 'UnitOfWorkSEG' using provider 'IBM.EntityFrameworkCore' with options: None
+2020-09-23 08:52:07.403 -05:00 [INF] Executing action method ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi) - Validation state: "Valid"
+2020-09-23 08:52:07.405 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__login_UserCust_0='?' (Size = 8), @__login_UserSuccli_1='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.musua_empr_id, q.musua_cust, q.musua_succli, q.musua_approve, q.musua_expiration_token, q.musua_mail, q.musua_name, q.musua_passencrip, q.musua_password, q.musua_phone, q.musua_token
+FROM ecm_musuario AS q
+WHERE (q.musua_cust = @__login_UserCust_0) AND (q.musua_succli = @__login_UserSuccli_1)
+2020-09-23 08:52:07.408 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2), @__usuario_MusuaCust_1='?' (Size = 12), @__usuario_MusuaSuccli_2='?' (Size = 12), @___contextAccessor_ClientIP_3='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.rmac_empr_id, q.rmac_usua_cust, q.rmac_usua_succli, q.rmac_mac, q.rmac_date, q.rmac_vapp_2fa
+FROM ecm_rmac AS q
+WHERE (((q.rmac_empr_id = @__usuario_MusuaEmprId_0) AND (q.rmac_usua_cust = @__usuario_MusuaCust_1)) AND (q.rmac_usua_succli = @__usuario_MusuaSuccli_2)) AND (q.rmac_mac = @___contextAccessor_ClientIP_3)
+2020-09-23 08:52:07.410 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2), @__usuario_MusuaCust_1='?' (Size = 12), @__usuario_MusuaSuccli_2='?' (Size = 12), @___contextAccessor_ClientIP_3='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.rterm_empr_id, q.rterm_usua_cust, q.rterm_usua_succli, q.rterm_mac, q.rterm_approve, q.rterm_date
+FROM ecm_rterminosuso AS q
+WHERE (((q.rterm_empr_id = @__usuario_MusuaEmprId_0) AND (q.rterm_usua_cust = @__usuario_MusuaCust_1)) AND (q.rterm_usua_succli = @__usuario_MusuaSuccli_2)) AND (q.rterm_mac = @___contextAccessor_ClientIP_3)
+2020-09-23 08:52:07.412 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__usuario_MusuaEmprId_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT FIRST 1 q.mempr_id, q.mempr_addr, q.mempr_apiapp2fa, q.mempr_apimen2fa, q.mempr_apisms, q.mempr_cmpy, q.mempr_come, q.mempr_conn, q.mempr_data, q.mempr_fcurr, q.mempr_fdate, q.mempr_fnumb, q.mempr_iden, q.mempr_name, q.mempr_numhisord, q.mempr_phon, q.mempr_term, q.mempr_web, q.mempre_mone_id, q.mempre_pais_id
+FROM ecm_mempresa AS q
+WHERE q.mempr_cmpy = @__usuario_MusuaEmprId_0
+2020-09-23 08:52:07.416 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 2), @p2='?' (Size = 12), @p4='?' (Size = 12), @p6='?' (Size = 3), @p8='?' (Size = 16) (DbType = DateTime), @p10='?' (Size = 4) (DbType = Int32), @p12='?' (Size = 4) (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO ecm_racceso (racce_empr_id, racce_usua_cust, racce_usua_succli, racce_mac, racce_date, racce_tapp_id, racce_vapp_id)
+VALUES (@p0, @p2, @p4, @p6, @p8, @p10, @p12);
+2020-09-23 08:52:07.417 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p14='?' (Size = 2), @p16='?' (Size = 12), @p18='?' (Size = 12), @p20='?' (Size = 3), @p22='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE ecm_rmac SET rmac_vapp_2fa = @p22
+ WHERE ( rmac_empr_id = @p14 AND rmac_usua_cust = @p16 AND rmac_usua_succli = @p18 AND rmac_mac = @p20 );
+2020-09-23 08:52:07.419 -05:00 [INF] Executed action method ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16.2312ms.
+2020-09-23 08:52:07.419 -05:00 [INF] Executing ObjectResult, writing value of type 'ECM.Aplicacion.DTO.Authentication.LoginResultDTO'.
+2020-09-23 08:52:07.420 -05:00 [INF] Executed action ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi) in 17.7898ms
+2020-09-23 08:52:07.420 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.Authentication.SessionController.Login (ECM.WebApi)'
+2020-09-23 08:52:07.420 -05:00 [INF] Request finished in 18.9379ms 200 application/json; charset=utf-8
+2020-09-23 08:52:07.426 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/valuesParametro  
+2020-09-23 08:52:07.429 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.429 -05:00 [INF] Request finished in 3.8018ms 204 
+2020-09-23 08:52:07.431 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/valuesParametro application/json 
+2020-09-23 08:52:07.431 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.441 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/valuesEvento  
+2020-09-23 08:52:07.441 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.442 -05:00 [INF] Request finished in 0.2326ms 204 
+2020-09-23 08:52:07.445 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/valuesCarro  
+2020-09-23 08:52:07.445 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.445 -05:00 [INF] Request finished in 0.1995ms 204 
+2020-09-23 08:52:07.445 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/valuesMenu  
+2020-09-23 08:52:07.445 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.445 -05:00 [INF] Request finished in 0.1402ms 204 
+2020-09-23 08:52:07.449 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/valuesEvento application/json 
+2020-09-23 08:52:07.449 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.449 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/valuesCarro application/json 
+2020-09-23 08:52:07.449 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.454 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/valuesMenu application/json 
+2020-09-23 08:52:07.454 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:52:07.537 -05:00 [INF] Successfully validated the token.
+2020-09-23 08:52:07.537 -05:00 [INF] Successfully validated the token.
+2020-09-23 08:52:07.537 -05:00 [INF] Successfully validated the token.
+2020-09-23 08:52:07.537 -05:00 [INF] Successfully validated the token.
+2020-09-23 08:52:07.539 -05:00 [INF] Invoke: "{\"path\":\"/api/valuesCarro\",\"userid\":\"DIEGO LEON SOTO OSORIO                  \",\"method\":\"GET\",\"remoteIp\":\"::1:62386\",\"body\":\"\"}"
+2020-09-23 08:52:07.539 -05:00 [INF] Invoke: "{\"path\":\"/api/valuesParametro\",\"userid\":\"DIEGO LEON SOTO OSORIO                  \",\"method\":\"GET\",\"remoteIp\":\"::1:62386\",\"body\":\"\"}"
+2020-09-23 08:52:07.539 -05:00 [INF] Invoke: "{\"path\":\"/api/valuesMenu\",\"userid\":\"DIEGO LEON SOTO OSORIO                  \",\"method\":\"GET\",\"remoteIp\":\"::1:62386\",\"body\":\"\"}"
+2020-09-23 08:52:07.539 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:52:07.539 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:52:07.539 -05:00 [INF] Invoke: "{\"path\":\"/api/valuesEvento\",\"userid\":\"DIEGO LEON SOTO OSORIO                  \",\"method\":\"GET\",\"remoteIp\":\"::1:62386\",\"body\":\"\"}"
+2020-09-23 08:52:07.539 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:52:07.539 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:52:07.540 -05:00 [INF] Request finished in 90.4244ms 404 
+2020-09-23 08:52:07.540 -05:00 [INF] Request finished in 85.8052ms 404 
+2020-09-23 08:52:07.540 -05:00 [INF] Request finished in 108.3139ms 404 
+2020-09-23 08:52:07.540 -05:00 [INF] Request finished in 91.179ms 404 
+2020-09-23 08:54:48.346 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/valuesEvento  
+2020-09-23 08:54:48.346 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:54:48.346 -05:00 [INF] Request finished in 0.485ms 204 
+2020-09-23 08:54:48.362 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/valuesMenu  
+2020-09-23 08:54:48.362 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:54:48.362 -05:00 [INF] Request finished in 0.2805ms 204 
+2020-09-23 08:54:48.366 -05:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44350/api/valuesCarro  
+2020-09-23 08:54:48.366 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:54:48.366 -05:00 [INF] Request finished in 0.2649ms 204 
+2020-09-23 08:54:48.366 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/valuesEvento application/json 
+2020-09-23 08:54:48.367 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:54:48.367 -05:00 [INF] Successfully validated the token.
+2020-09-23 08:54:48.367 -05:00 [INF] Invoke: "{\"path\":\"/api/valuesEvento\",\"userid\":\"DIEGO LEON SOTO OSORIO                  \",\"method\":\"GET\",\"remoteIp\":\"::1:62546\",\"body\":\"\"}"
+2020-09-23 08:54:48.367 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:54:48.368 -05:00 [INF] Request finished in 1.7787ms 404 
+2020-09-23 08:54:48.374 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/valuesMenu application/json 
+2020-09-23 08:54:48.374 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:54:48.374 -05:00 [INF] Successfully validated the token.
+2020-09-23 08:54:48.375 -05:00 [INF] Invoke: "{\"path\":\"/api/valuesMenu\",\"userid\":\"DIEGO LEON SOTO OSORIO                  \",\"method\":\"GET\",\"remoteIp\":\"::1:62546\",\"body\":\"\"}"
+2020-09-23 08:54:48.375 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:54:48.377 -05:00 [INF] Request finished in 2.9374ms 404 
+2020-09-23 08:54:48.377 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/valuesCarro application/json 
+2020-09-23 08:54:48.377 -05:00 [INF] CORS policy execution successful.
+2020-09-23 08:54:48.380 -05:00 [INF] Successfully validated the token.
+2020-09-23 08:54:48.380 -05:00 [INF] Invoke: "{\"path\":\"/api/valuesCarro\",\"userid\":\"DIEGO LEON SOTO OSORIO                  \",\"method\":\"GET\",\"remoteIp\":\"::1:62546\",\"body\":\"\"}"
+2020-09-23 08:54:48.380 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2020-09-23 08:54:48.389 -05:00 [INF] Request finished in 11.6573ms 404 

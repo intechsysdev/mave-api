@@ -1,0 +1,17 @@
+2021-07-15 07:27:08.435 -05:00 [INF] Iniciando Seg.WepApi
+2021-07-15 07:27:12.944 -05:00 [INF] User profile is available. Using 'C:\Users\admint\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-15 07:27:13.717 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/values  
+2021-07-15 07:27:13.994 -05:00 [INF] Invoke: "{\"path\":\"/api/values\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:54434\",\"body\":\"\"}"
+2021-07-15 07:27:14.013 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-07-15 07:27:14.058 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2021-07-15 07:27:14.080 -05:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller ECM.WebApi.Controllers.ValuesController (ECM.WebApi).
+2021-07-15 07:27:14.091 -05:00 [INF] Executing action method ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) - Validation state: "Valid"
+2021-07-15 07:27:14.094 -05:00 [INF] Executed action method ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.4208ms.
+2021-07-15 07:27:14.102 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2021-07-15 07:27:14.130 -05:00 [INF] Executed action ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) in 46.9778ms
+2021-07-15 07:27:14.130 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2021-07-15 07:27:14.134 -05:00 [INF] Request finished in 418.7229ms 200 application/json; charset=utf-8
+2021-07-15 07:27:14.192 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/favicon.ico  
+2021-07-15 07:27:14.194 -05:00 [INF] Invoke: "{\"path\":\"/favicon.ico\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:54434\",\"body\":\"\"}"
+2021-07-15 07:27:14.195 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-07-15 07:27:14.199 -05:00 [INF] Request finished in 6.4693ms 404 

@@ -1,0 +1,95 @@
+2021-02-15 22:33:46.353 -05:00 [INF] Iniciando Seg.WepApi
+2021-02-15 22:33:59.814 -05:00 [INF] User profile is available. Using 'C:\Users\admint\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-15 22:34:00.473 -05:00 [ERR] An exception occurred while trying to decrypt the element.
+System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+2021-02-15 22:34:01.573 -05:00 [ERR] An exception occurred while processing the key element '<key id="97b102ea-605e-49ce-8d7d-35a0e7ea024b" version="1" />'.
+System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+2021-02-15 22:34:01.615 -05:00 [WRN] Key "97b102ea-605e-49ce-8d7d-35a0e7ea024b" is ineligible to be the default key because its CreateEncryptor method failed.
+System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DeferredKey.<>c__DisplayClass1_0.<GetLazyDescriptorDelegate>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.get_Descriptor()
+   at Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory.CreateEncryptorInstance(IKey key)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.CreateEncryptor()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+2021-02-15 22:34:01.620 -05:00 [WRN] Key "97b102ea-605e-49ce-8d7d-35a0e7ea024b" is ineligible to be the default key because its CreateEncryptor method failed.
+System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DeferredKey.<>c__DisplayClass1_0.<GetLazyDescriptorDelegate>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.get_Descriptor()
+   at Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory.CreateEncryptorInstance(IKey key)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.CreateEncryptor()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+2021-02-15 22:34:01.624 -05:00 [INF] Creating key "bd641d73-22e8-4e74-8557-0d364930506c" with creation date "2021-02-16T03:34:01.6218841+00:00", activation date "2021-02-16T03:33:59.8199140+00:00", and expiration date "2021-05-17T03:33:59.8199140+00:00".
+2021-02-15 22:34:01.788 -05:00 [INF] Writing data to file 'C:\Users\admint\AppData\Local\ASP.NET\DataProtection-Keys\key-bd641d73-22e8-4e74-8557-0d364930506c.xml'.
+2021-02-15 22:34:03.704 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/values  
+2021-02-15 22:34:04.070 -05:00 [INF] Invoke: "{\"path\":\"/api/values\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:63458\",\"body\":\"\"}"
+2021-02-15 22:34:04.084 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-02-15 22:34:04.125 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2021-02-15 22:34:04.188 -05:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller ECM.WebApi.Controllers.ValuesController (ECM.WebApi).
+2021-02-15 22:34:04.198 -05:00 [INF] Executing action method ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) - Validation state: "Valid"
+2021-02-15 22:34:04.201 -05:00 [INF] Executed action method ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.37210000000000004ms.
+2021-02-15 22:34:04.210 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2021-02-15 22:34:04.238 -05:00 [INF] Executed action ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) in 47.6757ms
+2021-02-15 22:34:04.239 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2021-02-15 22:34:04.241 -05:00 [INF] Request finished in 538.0636ms 200 application/json; charset=utf-8
+2021-02-15 22:34:04.283 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/favicon.ico  
+2021-02-15 22:34:04.285 -05:00 [INF] Invoke: "{\"path\":\"/favicon.ico\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:63458\",\"body\":\"\"}"
+2021-02-15 22:34:04.285 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-02-15 22:34:04.290 -05:00 [INF] Request finished in 6.8358ms 404 
+2021-02-15 23:32:16.030 -05:00 [INF] Iniciando Seg.WepApi
+2021-02-15 23:32:18.267 -05:00 [INF] User profile is available. Using 'C:\Users\admint\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-15 23:32:18.662 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/values  
+2021-02-15 23:32:18.895 -05:00 [INF] Invoke: "{\"path\":\"/api/values\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:63797\",\"body\":\"\"}"
+2021-02-15 23:32:18.911 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-02-15 23:32:18.956 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2021-02-15 23:32:18.971 -05:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller ECM.WebApi.Controllers.ValuesController (ECM.WebApi).
+2021-02-15 23:32:18.981 -05:00 [INF] Executing action method ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) - Validation state: "Valid"
+2021-02-15 23:32:18.985 -05:00 [INF] Executed action method ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.31930000000000003ms.
+2021-02-15 23:32:18.993 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2021-02-15 23:32:19.020 -05:00 [INF] Executed action ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) in 45.6454ms
+2021-02-15 23:32:19.020 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2021-02-15 23:32:19.022 -05:00 [INF] Request finished in 362.2308ms 200 application/json; charset=utf-8
+2021-02-15 23:32:19.059 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/favicon.ico  
+2021-02-15 23:32:19.062 -05:00 [INF] Invoke: "{\"path\":\"/favicon.ico\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:63797\",\"body\":\"\"}"
+2021-02-15 23:32:19.062 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-02-15 23:32:19.067 -05:00 [INF] Request finished in 7.2977ms 404 
+2021-02-15 23:32:58.663 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/swagger  
+2021-02-15 23:32:58.663 -05:00 [INF] Invoke: "{\"path\":\"/api/swagger\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:63797\",\"body\":\"\"}"
+2021-02-15 23:32:58.663 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-02-15 23:32:58.669 -05:00 [INF] Request finished in 6.4659ms 404 
+2021-02-15 23:33:10.361 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/swagger  
+2021-02-15 23:33:10.362 -05:00 [INF] Invoke: "{\"path\":\"/swagger\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:63797\",\"body\":\"\"}"
+2021-02-15 23:33:10.362 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-02-15 23:33:10.363 -05:00 [INF] Request finished in 1.4411ms 404 
+2021-02-15 23:33:24.224 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44350/api/values/swagger  
+2021-02-15 23:33:24.224 -05:00 [INF] Invoke: "{\"path\":\"/api/values/swagger\",\"userid\":null,\"method\":\"GET\",\"remoteIp\":\"::1:63797\",\"body\":\"\"}"
+2021-02-15 23:33:24.224 -05:00 [WRN] AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures '["en-US","en"]'.
+2021-02-15 23:33:24.224 -05:00 [INF] Executing endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2021-02-15 23:33:24.270 -05:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Get(Int32) on controller ECM.WebApi.Controllers.ValuesController (ECM.WebApi).
+2021-02-15 23:33:24.410 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-15 23:33:24.437 -05:00 [INF] Executed action ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi) in 166.835ms
+2021-02-15 23:33:24.437 -05:00 [INF] Executed endpoint 'ECM.WebApi.Controllers.ValuesController.Get (ECM.WebApi)'
+2021-02-15 23:33:24.438 -05:00 [INF] Request finished in 214.1649ms 400 application/problem+json; charset=utf-8

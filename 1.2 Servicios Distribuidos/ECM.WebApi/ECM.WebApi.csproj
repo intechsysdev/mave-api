@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IBM.EntityFrameworkCore" Version="1.3.0.100" />
+    <PackageReference Include="LINQKit.Core" Version="1.1.16" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\1.3 Aplicacion\1.3.1 Servicios\ECM.Aplicacion.Servicios\ECM.Aplicacion.Servicios.csproj" />
+    <ProjectReference Include="..\..\1.5 Infraestructura\ECM.Infraestructura.Datos\ECM.Infraestructura.Datos.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Itdear.Aplicacion.Core">
+      <HintPath>..\..\..\Packages\Itdear.Aplicacion.Core.1.0.0\Itdear.Aplicacion.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Itdear.Dominio.Core">
+      <HintPath>..\..\..\Packages\Itdear.Infraestructura.Datos.Core.1.0.0\Itdear.Dominio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Itdear.Infraestructura.Datos.Core">
+      <HintPath>..\..\..\Packages\Itdear.Infraestructura.Datos.Core.1.0.0\Itdear.Infraestructura.Datos.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Itdear.Infraestructura.Seguridad">
+      <HintPath>..\..\..\Packages\Itdear.Infraestructura.Seguridad.1.0.0\Itdear.Infraestructura.Seguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="Itdear.Infraestructura.Transversal">
+      <HintPath>..\..\..\Packages\Itdear.Infraestructura.Transversal.1.0.0\Itdear.Infraestructura.Transversal.dll</HintPath>
+    </Reference>
+    <Reference Include="Itdear.ServiciosDistribuidos.WebApi.Core">
+      <HintPath>..\..\..\Packages\Itdear.ServiciosDistribuidos.WebApi.Core.1.0.0\Itdear.ServiciosDistribuidos.WebApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Itdear.Transversal.NetCore">
+      <HintPath>..\..\..\Packages\Itdear.Transversal.NetCore.1.0.0\Itdear.Transversal.NetCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
