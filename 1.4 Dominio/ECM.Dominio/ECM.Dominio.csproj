@@ -1,13 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-  </PropertyGroup>
-
   <ItemGroup>
-    <Reference Include="Itdear.Dominio.Core">
-      <HintPath>..\..\..\Packages\Itdear.Dominio.Core.1.0.0\Itdear.Dominio.Core.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\1.1 Transversal\Itdear.Dominio.Core\Itdear.Dominio.Core.csproj" />
   </ItemGroup>
 
 </Project>

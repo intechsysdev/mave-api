@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Itdear.Infraestructura.Datos.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(EfCoreVersion)" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="$(EfCoreVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Itdear.Dominio.Core\Itdear.Dominio.Core.csproj" />
+    <ProjectReference Include="..\Itdear.Infraestructura.Transversal\Itdear.Infraestructura.Transversal.csproj" />
+  </ItemGroup>
+
+</Project>

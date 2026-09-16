@@ -1,7 +1,5 @@
-﻿using System;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using System;
+using Microsoft.AspNetCore.Builder;
 using Serilog;
 
 namespace ECM.WebApi
@@ -10,19 +8,29 @@ namespace ECM.WebApi
     {
         public static void Main(string[] args)
         {
-            var configuration = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json")
-            .Build();
+            var builder = WebApplication.CreateBuilder(args);
 
+            // El log se levanta antes que el host para que cualquier fallo de arranque
+            // quede registrado en el archivo y no solo en la consola.
             Log.Logger = new LoggerConfiguration()
-            .ReadFrom.Configuration(configuration)
-            .CreateLogger();
+                .ReadFrom.Configuration(builder.Configuration)
+                .CreateLogger();
+
+            builder.Host.UseSerilog();
 
             try
             {
-                Log.Information("Iniciando Seg.WepApi");
+                Log.Information("Iniciando ECM.WebApi");
 
-                CreateWebHostBuilder(args).Build().Run();
+                var startup = new Startup(builder.Configuration);
+
+                startup.ConfigureServices(builder.Services);
+
+                var app = builder.Build();
+
+                startup.Configure(app, app.Environment);
+
+                app.Run();
             }
             catch (Exception ex)
             {
@@ -33,10 +41,5 @@ namespace ECM.WebApi
                 Log.CloseAndFlush();
             }
         }
-
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                   .UseSerilog()
-                   .UseStartup<Startup>();
     }
 }

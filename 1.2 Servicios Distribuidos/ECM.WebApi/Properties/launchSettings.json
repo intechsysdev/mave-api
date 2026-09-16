@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -7,7 +8,6 @@
       "sslPort": 44350
     }
   },
-  "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
@@ -18,12 +18,13 @@
         "SecretKeyJWT": "58CUob4YXcFZMGWUtATShcFL31clonET"
       }
     },
-    "PED.WebApi": {
+    "ECM.WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SecretKeyJWT": "58CUob4YXcFZMGWUtATShcFL31clonET"
       },
       "applicationUrl": "https://localhost:5001;http://localhost:5000"
     }

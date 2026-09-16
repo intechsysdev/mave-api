@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Itdear.ServiciosDistribuidos.WebApi.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Itdear.Aplicacion.Core\Itdear.Aplicacion.Core.csproj" />
+    <ProjectReference Include="..\Itdear.Infraestructura.Transversal\Itdear.Infraestructura.Transversal.csproj" />
+  </ItemGroup>
+
+</Project>

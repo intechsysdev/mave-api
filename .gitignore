@@ -4,3 +4,6 @@ obj/
 packages/ 
 *.user 
 *.suo 
+
+# Archivos de log generados en ejecucion
+Logs/

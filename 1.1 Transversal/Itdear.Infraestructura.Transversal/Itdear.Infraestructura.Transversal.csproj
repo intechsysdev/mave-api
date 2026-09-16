@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Itdear.Infraestructura.Transversal</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- ContextAccessor lee del HttpContext, por eso se referencia el framework web. -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="$(AutoMapperVersion)" />
+  </ItemGroup>
+
+</Project>

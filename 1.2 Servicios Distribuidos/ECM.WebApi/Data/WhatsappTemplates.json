@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "codigo-verificacion",
+    "Tenant": "VE",
+    "TemplateId": "",
+    "ElementName": "",
+    "Language": "es",
+    "Category": "AUTHENTICATION",
+    "Body": "Su codigo de verificacion es {{1}}",
+    "ParamNames": [ "codigo" ],
+    "HeaderType": "none",
+    "HeaderUrl": "",
+    "HeaderFilename": "",
+    "Enabled": false,
+    "Description": "Codigo de doble factor de autenticacion del ecommerce.",
+    "UpdatedAt": ""
+  },
+  {
+    "Name": "recuperar-password",
+    "Tenant": "VE",
+    "TemplateId": "",
+    "ElementName": "",
+    "Language": "es",
+    "Category": "UTILITY",
+    "Body": "Hola {{1}}, asigne su contrasena aqui: {{2}}",
+    "ParamNames": [ "usuario", "url" ],
+    "HeaderType": "none",
+    "HeaderUrl": "",
+    "HeaderFilename": "",
+    "Enabled": false,
+    "Description": "Enlace de recuperacion de contrasena.",
+    "UpdatedAt": ""
+  },
+  {
+    "Name": "confirmacion-pedido",
+    "Tenant": "VE",
+    "TemplateId": "",
+    "ElementName": "",
+    "Language": "es",
+    "Category": "UTILITY",
+    "Body": "Hola {{1}}, registramos su pedido #{{2}}. Consultelo aqui: {{3}}",
+    "ParamNames": [ "usuario", "idPedido", "url" ],
+    "HeaderType": "none",
+    "HeaderUrl": "",
+    "HeaderFilename": "",
+    "Enabled": false,
+    "Description": "Confirmacion de registro de un pedido.",
+    "UpdatedAt": ""
+  }
+]

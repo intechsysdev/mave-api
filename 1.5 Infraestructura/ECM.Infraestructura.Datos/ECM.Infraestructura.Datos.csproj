@@ -1,32 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-  </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="LINQKit.Core" Version="1.1.16" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(EfCoreVersion)" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="$(EfCoreVersion)" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\1.1 Transversal\Itdear.Infraestructura.Datos.Core\Itdear.Infraestructura.Datos.Core.csproj" />
     <ProjectReference Include="..\..\1.4 Dominio\ECM.Dominio\ECM.Dominio.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Itdear.Dominio.Core">
-      <HintPath>..\..\..\Packages\Itdear.Infraestructura.Datos.Core.1.0.0\Itdear.Dominio.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Itdear.Infraestructura.Datos.Core">
-      <HintPath>..\..\..\Packages\Itdear.Infraestructura.Datos.Core.1.0.0\Itdear.Infraestructura.Datos.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Itdear.Infraestructura.Transversal">
-      <HintPath>..\..\..\Packages\Itdear.Infraestructura.Datos.Core.1.0.0\Itdear.Infraestructura.Transversal.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
-      <HintPath>..\..\..\Packages\Itdear.Infraestructura.Datos.Core.1.0.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

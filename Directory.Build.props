@@ -1,0 +1,27 @@
+<Project>
+
+  <!--
+    Propiedades comunes a todos los proyectos de la solucion.
+    Se centraliza aqui el framework destino para que la migracion a nuevas
+    versiones de .NET sea un cambio en un unico punto.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- Versiones de paquetes usadas de forma transversal -->
+  <PropertyGroup>
+    <EfCoreVersion>10.0.6</EfCoreVersion>
+    <IbmEfCoreVersion>10.0.0.100</IbmEfCoreVersion>
+    <AutoMapperVersion>14.0.0</AutoMapperVersion>
+    <SerilogAspNetCoreVersion>10.0.0</SerilogAspNetCoreVersion>
+    <JwtVersion>8.14.0</JwtVersion>
+    <NewtonsoftJsonVersion>13.0.4</NewtonsoftJsonVersion>
+  </PropertyGroup>
+
+</Project>
